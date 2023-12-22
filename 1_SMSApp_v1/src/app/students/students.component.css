@@ -1,0 +1,32 @@
+table,th,td{
+border:1px solid;
+text-align: center;
+font-family: 'Times New Roman', Times, serif;
+}
+
+button{
+    background-color: green;
+    color:burlywood;
+    font-size: 15px;
+    
+}
+
+.btnDelete{
+    background-color: red;
+    font-size: 15px;
+    
+}
+span{
+    font-size: 25px;
+    background-color:yellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.success{
+ color: green;
+
+}
+
+.error{
+    color: red;
+}

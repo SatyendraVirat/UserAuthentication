@@ -1,0 +1,20 @@
+
+<form (ngSubmit)="perform_login()">
+  <!-- Form Field -->
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input matInput  required type="text" id="un" name="un" [(ngModel)]="username">
+    <mat-hint>6 Character Minimum</mat-hint>
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input  matInput  required type="password" id="ps" name="ps" [(ngModel)]="password">
+  </mat-form-field><br>
+    <label for="Gender">GENDER:</label><br>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="Male">MALE</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="css">FEMALE</label><br>
+    <button mat-raised-button color="primary" type="submit" value="submit">Submit</button>
+  </form>
+  {{message}}

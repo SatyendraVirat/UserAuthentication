@@ -1,0 +1,38 @@
+<app-sort (criteriaemitter)="sort($event)"></app-sort>
+<button (click)="showStudents()">Show Student</button>
+
+<table *ngIf="students.length>0">
+    <thead>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Number of Attepmts</th>
+            <th>Percentage</th>
+            <th>Subjects</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students">
+            <td>{{s.rollno}}</td>
+            <td>{{s.name | uppercase}}</td>
+            <td>{{s.numberOfAttempts}}</td>
+            <td>{{s.percentage/100 | percent}}</td>
+            <td>
+                <ul *ngFor="let sl of s.subjectsLearning">
+                    <li>{{sl}}</li>
+                </ul>
+            </td>
+            <td>
+                <button class="btnDelete" (click)="deleteStudents(s.rollno)">Delete</button>&nbsp;
+                <button (click)="updateStudent(s)">Update</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<span [class]="colorClass">{{message}}</span>
+<div *ngIf="updatedClicked">
+    <app-student-update [updatedStudent]="selectedStudent" (studentEmitter)="doUpdate($event)" ></app-student-update>
+</div>
+

@@ -1,0 +1,13 @@
+h2{
+    padding: 20px;
+    color: orange;
+}
+span{
+    text-align: center;
+    color:red;
+    font-size: 30px;
+}
+footer{
+    position: absolute;
+    width: 100%;
+}

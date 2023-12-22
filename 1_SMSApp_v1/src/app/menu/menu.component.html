@@ -1,0 +1,6 @@
+<a *ngIf="!service.isUserLogedIn" routerLink="login">Login</a><br>
+<a *ngIf="service.isUserLogedIn" routerLink="register">Add Student</a><br>
+<a *ngIf="service.isUserLogedIn" routerLink="students">Student</a>
+<a routerLink="aboutus">AboutUs</a>
+<a routerLink="contactus">ContactUs</a>
+<a *ngIf="service.isUserLogedIn" routerLink="logout" (click)="service.logout()" >Logout</a><br>

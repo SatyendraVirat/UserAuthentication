@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <!-- s is refernce to mat-side nav -->
+  <mat-icon (click)="s.toggle()">menu</mat-icon>
+  <span>Student --- Management  ---  System  ---   App</span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #s opened="true" mode="push">
+    <app-menu></app-menu>
+  </mat-sidenav>
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+</mat-sidenav-container>
